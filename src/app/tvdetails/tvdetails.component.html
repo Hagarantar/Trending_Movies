@@ -1,0 +1,17 @@
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-4">
+            <img class="w-100" [src]="imgPrefix+tvDetails?.poster_path" [alt]="tvDetails.title">
+        </div>
+
+
+        <div class="col-md-8">
+                <h4 class="h2">{{tvDetails?.name}}</h4>
+                <h5 class="my-4">Date : {{tvDetails?.first_air_date}}</h5>
+                <p> Vote : {{tvDetails?.vote_count}}</p>
+                <p>{{tvDetails?.overview}}</p>
+            </div>
+            
+    </div>
+</div>

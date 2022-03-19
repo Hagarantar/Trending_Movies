@@ -1,0 +1,18 @@
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-4">
+            <img class="w-100" [src]="imgPrefix+personDetails?.profile_path" [alt]="personDetails.name">
+        </div>
+
+        <div class="col-md-8">
+            <h4 class="h2 mb-4">{{personDetails?.name}}</h4>
+
+            <h5>BirthDay : {{personDetails?.birthday}}</h5>
+            <h5 *ngIf="personDetails?.deathday != null" class=" my-4">DeathDay : {{personDetails?.deathday}}</h5>
+            <h5 class="my-4">Place_of_birth : {{personDetails?.place_of_birth}}</h5>
+            <h5 class="mb-3">Nick_Name : {{personDetails?.also_known_as[1]}}</h5>
+            <p>Bio :  {{personDetails?.biography|seeMore:30}} </p>
+        </div>
+    </div>
+</div>
